@@ -1,0 +1,30 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Movie Selector</title>
+  <meta name="description" content="Movie Selector">
+  <meta name="author" content="Zolor">
+
+  <!link rel="stylesheet" href="css/styles.css?v=1.0">
+
+</head>
+
+<body>
+  <div align="center">
+  <h1>Movie Selector</h1>
+     <p1>
+      <form action="/" method="POST">
+          <div class="form-group">
+            <label>Input your IMDB Watch List URL Here:</label><br />
+            <input type="url" class="form-control" id="imdb_url" name="imdb_url" placeholder="eg. https://www.imdb.com/user/ur0000000/watchlist" style="width: 310px;" required="True" pattern="https?://www.imdb.com.+">
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+     </p1>
+  </div>
+  <!script src="js/scripts.js"><!/script>
+</body>
+</html>
