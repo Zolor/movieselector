@@ -15,6 +15,7 @@
 # [START gae_python37_app]
 from flask import Flask, render_template, request, redirect, url_for
 from movieselector import movieselector
+import requests
 
 # If `entrypoint` is not defined in app.yaml, App Engine will look for an app
 # called `app` in `main.py`.
@@ -32,8 +33,11 @@ def index():
 
 @app.route('/answer', methods=["GET"])
 def answer():
-    movie = movieselector(request.args.get('imdb_answer'))
-    return render_template('answer.html', movie = movie)
+    if "This list is not public" in requests.get(request.args.get('imdb_answer')).text:
+        return render_template('error.html')
+    else:
+        movie, imdb_link, imdb_poster = movieselector(request.args.get('imdb_answer'))
+        return render_template('answer.html', movie = movie, imdb_link = imdb_link, imdb_poster = imdb_poster)
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
