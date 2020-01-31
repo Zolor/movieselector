@@ -6,8 +6,6 @@
   <title>Movie Selector</title>
   <meta name="description" content="Movie Selector">
   <meta name="author" content="Zolor">
-
-  <!link rel="stylesheet" href="css/styles.css?v=1.0">
   <style>
     label    {font-family: "Trebuchet MS", Helvetica, sans-serif;}
     input    {text-align: center;}
@@ -15,7 +13,7 @@
 </head>
 <body>
   <div align="center">
-  <img src="https://storage.cloud.google.com/zolor_movieselector_assets/movieselector_logo.png?hl=sv" alt="Movie Selector">
+  <img src="{{url_for("static", filename='movieselector_logo.png')}}" alt="Movie Selector">
      <p>
       <form action="/" method="POST">
           <div class="form-group">

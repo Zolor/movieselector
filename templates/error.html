@@ -6,15 +6,13 @@
   <title>Movie Selector</title>
   <meta name="description" content="Movie Selector">
   <meta name="author" content="Zolor">
-
-  <!link rel="stylesheet" href="css/styles.css?v=1.0">
   <style>
     p,h2    {font-family: "Trebuchet MS", Helvetica, sans-serif;}
   </style>
 </head>
 <body>
   <div align="center">
-  <img src="https://storage.cloud.google.com/zolor_movieselector_assets/movieselector_logo.png?hl=sv" alt="Movie Selector">
+  <img src="{{url_for("static", filename='movieselector_logo.png')}}" alt="Movie Selector">
    <h2><b>Error:</b></h2>
    <p>
       Your IMDB Watchlist appears to not be public :(
