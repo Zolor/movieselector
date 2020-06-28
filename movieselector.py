@@ -18,7 +18,6 @@ def movieselector(imdb_url):
 			break
 
 	json_start = js_text.index(search_str) + len(search_str)
-	json_text = js_text[json_start:-2]
 	json_obj = json.loads(js_text[json_start:-2])
 	imdb_lista = []
 	for title in json_obj['titles']:
